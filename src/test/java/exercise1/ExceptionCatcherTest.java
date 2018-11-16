@@ -23,7 +23,7 @@ public class ExceptionCatcherTest {
 
 	@Test
 	public void executeExceptionThrowerSafely_when_throwing_exception() {
-		doThrow(new TestCustomException()).when(exceptionThrower).throwACustomExceptionWhenValueIs42(42);
+		doThrow(new MyException()).when(exceptionThrower).throwACustomExceptionWhenValueIs42(42);
 
 		exceptionCatcher.executeExceptionThrowerSafely(42);
 
